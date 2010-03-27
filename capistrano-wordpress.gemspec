@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
     "README",
      "Rakefile",
      "VERSION",
+     "capistrano-wordpress.gemspec",
      "lib/wordpress/base.rb",
      "lib/wordpress/common.rb"
   ]
