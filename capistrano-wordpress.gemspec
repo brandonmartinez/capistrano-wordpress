@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{capistrano-wordpress}
-  s.version = "0.0.1"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brandon Martinez"]
@@ -16,12 +16,12 @@ Gem::Specification.new do |s|
     "README"
   ]
   s.files = [
-    "README",
+    ".gitignore",
+     "README",
      "Rakefile",
      "VERSION",
      "capistrano-wordpress.gemspec",
-     "lib/wordpress/base.rb",
-     "lib/wordpress/common.rb"
+     "lib/capistrano_wordpress.rb"
   ]
   s.homepage = %q{http://www.brandonmartinez.com/}
   s.rdoc_options = ["--charset=UTF-8"]
