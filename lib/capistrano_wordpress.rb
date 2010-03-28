@@ -72,11 +72,11 @@ Capistrano::Configuration.instance(:must_exist).load do
   namespace :deploy do
 
     # Remove normal "rails" tasks; not needed for WP
-    [:setup, :update, :update_code, :finalize_update, :symlink, :restart].each do |default_task|
-      task default_task do 
-        # ... ahh, silence!
-      end
-    end
+    # [:setup, :update, :update_code, :finalize_update, :symlink, :restart].each do |default_task|
+    #   task default_task do 
+    #     # ... ahh, silence!
+    #   end
+    # end
 
     desc "A macro-task that updates the code and fixes the symlink."
     task :default do
@@ -102,5 +102,11 @@ Capistrano::Configuration.instance(:must_exist).load do
       run "killall php5.cgi"
     end
 
+  end
+  
+  namespace :git do
+    
+    #TODO: Add git task to automatically check in repo.
+    
   end
 end
