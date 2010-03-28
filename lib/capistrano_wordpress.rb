@@ -50,9 +50,10 @@ Capistrano::Configuration.instance(:must_exist).load do
   set :appdir,               	"/home/#{user}/deployments/#{application}"
   set :scm,                   'git'
   set :scm_verbose,           true
-  set :repository,            "#{user}@#{domain}:git/#{application}.git"
+  set :local_repository,      "ssh://#{user}@#{domain}/~/git/#{application}.git"
+  set :repository,            "/home/#{user}/git/#{application}.git"
   set :branch,                'master'
-  set :deploy_via,            'remote_cache'
+  #set :deploy_via,            'remote_cache'
   set :git_shallow_clone,     1
   set :deploy_to,            	"/home/#{user}/#{domain}/wp-content/themes/"
   set :releases_path,        	"/home/#{user}/cap/#{domain}/releases/"
